@@ -4,7 +4,7 @@
 #if !os(watchOS)
 import Foundation
 
-struct NestedBatchUpdate {
+public struct NestedBatchUpdate {
     let itemDeletions: [IndexPath]
     let itemInsertions: [IndexPath]
     let itemMoves: [(from: IndexPath, to: IndexPath)]
@@ -12,7 +12,7 @@ struct NestedBatchUpdate {
     let sectionInsertions: IndexSet
     let sectionMoves: [(from: Int, to: Int)]
 
-    init(
+    public init(
         diff: NestedExtendedDiff,
         indexPathTransform: (IndexPath) -> IndexPath = { $0 },
         sectionTransform: (Int) -> Int = { $0 }
