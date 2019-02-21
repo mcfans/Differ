@@ -5,12 +5,12 @@
 import Foundation
 
 public struct NestedBatchUpdate {
-    let itemDeletions: [IndexPath]
-    let itemInsertions: [IndexPath]
-    let itemMoves: [(from: IndexPath, to: IndexPath)]
-    let sectionDeletions: IndexSet
-    let sectionInsertions: IndexSet
-    let sectionMoves: [(from: Int, to: Int)]
+    public let itemDeletions: [IndexPath]
+    public let itemInsertions: [IndexPath]
+    public let itemMoves: [(from: IndexPath, to: IndexPath)]
+    public let sectionDeletions: IndexSet
+    public let sectionInsertions: IndexSet
+    public let sectionMoves: [(from: Int, to: Int)]
 
     public init(
         diff: NestedExtendedDiff,
